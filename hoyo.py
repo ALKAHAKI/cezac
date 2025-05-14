@@ -21,7 +21,7 @@ class PravdaNewsParser:
         soup = BeautifulSoup(html, 'html.parser')
         titles = []
 
-        # Заголовки новин на головній сторінці (приклад селектора)
+         
         news_blocks = soup.select('.article__title, .top-news__title')
 
         for block in news_blocks:
@@ -39,7 +39,7 @@ class PravdaNewsParser:
             for i, title in enumerate(titles, 1):
                 print(f"{i}. {title}")
 
-# Використання
+ 
 if __name__ == "__main__":
     parser = PravdaNewsParser()
     parser.run()
